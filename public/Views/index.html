@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 <head>
     <link rel="icon" href="../Images/ruby-512.png" sizes="16x16">
@@ -13,15 +13,8 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
 </head>
 
-<body class="font">
-    <nav class="navbar navbar-dark bg-dark justify-content-between" style="background-color: #263238 !important;">
-        <a class="navbar-brand"><img class="navImage" src="../Images/diamondnavbar.png" alt="nav image"></a>
-        <div class="navbar-text-title">FREE SHIPPING ON ALL ORDERS OVER $40!</div>
-        <form class="form-inline">
-            <a class="btn btn-bd-white mb-3 mb-md-0 ml-md-3">Login</a>
-            <a class="btn btn-bd-white mb-3 mb-md-0 ml-md-3">Register</a>
-        </form>
-    </nav>
+<body class="font" ng-controller="mainController">
+    <navbar-directive data="dataNavbar"></navbar-directive>
     <div class="mainContainer" style="background-color: #F8F8F8">
         <div style="background-color: #EEEEEE">
             <div class="row">
@@ -309,13 +302,10 @@
 <script type="application/javascript" src="../Imports/js/popper.min.js"></script>
 <script type="application/javascript" src="../Imports/js/angular.min.js"></script>
 <script type="application/javascript" src="../Imports/js/bootstrap-material-design.min.js"></script>
-<script type="text/javascript">
-    function resizeImg(img, height, width) {
-        img.height = height;
-        img.width = width;
-    }
-
-</script>
+<script type="application/javascript" src="../javascripts/app.js"></script>
+    <script type="application/javascript" src="../javascripts/Directives/navbarDirective/navbar.js"></script>
+    <!--
+<script type="application/javascript" src="../javascripts/Directives/navbarDirective/navbar.js"></script>-->
 <script>
     $(document).ready(function() {
         $('body').bootstrapMaterialDesign();

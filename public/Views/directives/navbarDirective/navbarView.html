@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark bg-dark justify-content-between" style="background-color: #263238 !important;">
+    <a class="navbar-brand"><img class="navImage" src={{data.imgUrl}} alt="nav image"></a>
+    <div class="navbar-text-title">{{data.navText}}</div>
+    <form class="form-inline">
+        <div ng-repeat="button in data.buttons">
+            <a ng-click="changeLocation(button.url)" class="btn btn-bd-white mb-3 mb-md-0 ml-md-3">{{button.name}}</a>
+        </div>
+    </form>
+</nav>
